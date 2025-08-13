@@ -32,6 +32,25 @@ section {
   padding: 5.6rem 0;
 }
 
+.btn {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1.7rem 2.6rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #99002e;
+}
+
+.btn:active {
+  background-color: #800026;
+}
+
 /* =============================== HERO =============================== */
 
 .header {
@@ -137,15 +156,83 @@ section {
   display: block;
 }
 
+.hero-content {
+  padding: 10rem 0;
+}
+
+.hero-content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.hero-info h4 {
+  max-width: 51.4rem;
+  width: 100%;
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  color: var(--medium-blue);
+  margin-bottom: 1rem;
+}
+
+.hero-info h1 {
+  max-width: 56rem;
+  width: 100%;
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 5.1rem;
+  line-height: 110%;
+  color: #181818;
+  margin-bottom: 3.4rem;
+}
+
+.hero-list {
+  max-width: 56rem;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4.8rem;
+}
+
+.hero-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.hero-item i {
+  font-size: 1.8rem;
+  color: var(--medium-blue);
+  transform: translateY(0.5rem);
+}
+
+.hero-item span {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 140%;
+  color: var(--black);
+}
+
+.hero-info-btns {
+  display: flex;
+  gap: 3rem;
+}
+
 /* =============================== RESPONSIVE =============================== */
 
 @media (max-width: 1000px) {
+  /* =============================== HERO =============================== */
   .header-logo {
     margin-right: 4rem;
   }
 }
 
 @media (max-width: 768px) {
+  /* =============================== HERO =============================== */
   .nav-list {
     width: 40%;
     position: fixed;
@@ -182,9 +269,23 @@ section {
     display: block;
     margin-left: 4.8rem;
   }
+
+  .hero-content .container,
+  .hero-list {
+    flex-direction: column;
+  }
+
+  .hero-item {
+    transform: translateY(0);
+  }
+
+  .hero-info-btns {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
+  /* =============================== HERO =============================== */
   .nav-contact {
     display: none;
   }
