@@ -51,6 +51,21 @@ section {
   background-color: #800026;
 }
 
+.section-title {
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 150%;
+}
+
+.section-title-black {
+  color: var(--black);
+}
+
+.section-title-white {
+  color: var(--white);
+}
+
 /* =============================== HERO =============================== */
 
 .header {
@@ -222,12 +237,146 @@ section {
   gap: 3rem;
 }
 
+/* =============================== STEPS =============================== */
+
+.steps {
+  background-color: var(--light-blue);
+}
+
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 4rem 0;
+  gap: 1.6rem;
+}
+
+.steps-item {
+  padding: 2.4rem 2.9rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.speps-item-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.speps-item-header h4,
+.speps-item-header a {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+
+.speps-item-header h4 {
+  color: var(--black);
+}
+
+.speps-item-header a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  display: block;
+}
+
+.steps-item p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.steps-btns {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* =============================== PROBLEM =============================== */
+
+.problem {
+  background-color: var(--medium-blue);
+}
+
+.problem-list {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.problem-item {
+  border-radius: 1rem;
+  background-color: var(--white);
+  padding: 2.4rem 2.9rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.problem-item img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.problem-item-content h3 {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.problem-item-content h3 span {
+  color: var(--black);
+}
+
+.problem-item-content p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.problem-box {
+  display: flex;
+  align-items: center;
+  margin-top: 2.4rem;
+  background-color: var(--white);
+  padding: 2.4rem 2.9rem;
+  border-radius: 1rem;
+  gap: 1.5rem;
+}
+
+.problem-box img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.problem-box p {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--dark-blue);
+}
+
 /* =============================== RESPONSIVE =============================== */
 
 @media (max-width: 1000px) {
   /* =============================== HERO =============================== */
   .header-logo {
     margin-right: 4rem;
+  }
+
+  /* =============================== STEPS =============================== */
+  .steps-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -280,6 +429,22 @@ section {
   }
 
   .hero-info-btns {
+    flex-direction: column;
+  }
+
+  /* =============================== STEPS =============================== */
+  .steps-list {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-btns {
+    flex-direction: column;
+  }
+
+  /* =============================== PROBLEM =============================== */
+
+  .problem-item,
+  .problem-box {
     flex-direction: column;
   }
 }
