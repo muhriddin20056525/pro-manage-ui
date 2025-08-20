@@ -366,6 +366,170 @@ section {
   color: var(--dark-blue);
 }
 
+/* =============================== PROCESS =============================== */
+
+.process-grid {
+  gap: 3.5rem;
+  display: grid;
+  margin-top: 4.8rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.process-img button {
+  display: block;
+  margin: 4rem auto 0;
+}
+
+.process-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.process-steps-item {
+  padding-left: 4rem;
+  position: relative;
+}
+
+.process-steps-item span {
+  content: "1";
+  width: 2.8rem;
+  height: 2.8rem;
+  display: block;
+  color: var(--white);
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: var(--medium-blue);
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 2.4rem;
+  position: absolute;
+  left: 0;
+}
+
+.process-steps-item:nth-child(1)::before,
+.process-steps-item:nth-child(2)::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  left: 1.4rem;
+  top: 2.8rem;
+  background-color: #66727f;
+  position: absolute;
+  z-index: -10;
+}
+
+.process-steps-item h3 {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--black);
+  margin-bottom: 1.6rem;
+}
+
+.process-steps-item p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.process-info > h3 {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+  margin-bottom: 1.6rem;
+}
+
+.process-check-list {
+  display: grid;
+  gap: 3.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.process-check-item {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.process-check-item i {
+  stroke-width: 1.5px;
+  margin-top: 1rem;
+  stroke: var(--medium-blue);
+}
+
+.process-check-item h4 {
+  font-family: var(--font-3);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+}
+
+/* =============================== ABOUT =============================== */
+
+.about {
+  background-color: var(--medium-blue);
+}
+
+.about-grid {
+  gap: 5rem;
+  display: grid;
+  margin-top: 4rem;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-left p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--white);
+  font-family: var(--font-1);
+}
+
+.about-info > h3 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--white);
+  margin-bottom: 2.8rem;
+  font-family: var(--font-3);
+}
+
+.about-list {
+  gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-item {
+  gap: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.about-item-content h3 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 150%;
+  color: var(--white);
+  font-family: var(--font-1);
+}
+
+.about-item-content p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: var(--white);
+  font-family: var(--font-1);
+}
+
 /* =============================== RESPONSIVE =============================== */
 
 @media (max-width: 1000px) {
@@ -377,6 +541,21 @@ section {
   /* =============================== STEPS =============================== */
   .steps-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* =============================== PROCESS =============================== */
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-img img {
+    display: block;
+    margin-inline: auto;
+  }
+
+  /* =============================== ABOUT =============================== */
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -457,5 +636,15 @@ section {
 
   .nav-list {
     width: 100%;
+  }
+
+  /* =============================== PROCESS =============================== */
+  .process-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* =============================== ABOUT =============================== */
+  .about-list {
+    grid-template-columns: 1fr;
   }
 }
