@@ -530,8 +530,138 @@ section {
   font-family: var(--font-1);
 }
 
+/* =============================== REVIEWS =============================== */
+
+.reviews {
+  background-color: #fafcff;
+}
+
+.reviews-list {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 4.8rem;
+}
+
+.reviews-item {
+  width: 36.8rem;
+  padding: 2.4rem;
+  background-color: var(--white);
+  box-shadow: 0 24px 48px 0 rgba(230, 235, 245, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-item h3 {
+  font-family: var(--font-3);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--medium-blue);
+  margin-bottom: 1rem;
+}
+
+.reviews-item > p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+  flex-grow: 1;
+}
+
+.reviews-item-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviews-item-end p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #66727f;
+}
+
+.reviews-item-end span {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #a5aeb3;
+}
+
+.reviews hr {
+  margin-top: 4rem;
+  border: 1px solid #e2e2e2;
+}
+
+.reviews button {
+  display: block;
+  margin: 4rem auto;
+}
+
 /* =============================== RESPONSIVE =============================== */
 
+.faq {
+  background-color: #f2f8fc;
+}
+
+.faq-list {
+  margin-top: 4.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto; /* har qator balandligi kontentga qarab bo‘lsin */
+  align-items: start;
+  gap: 1.6rem;
+}
+
+.faq-item {
+  border-radius: 2rem;
+  padding: 2.4rem;
+  background-color: var(--white);
+  box-shadow: 0 24px 48px 0 rgba(230, 235, 245, 0.4);
+}
+
+.faq-item-header {
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-item-header h3 {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  color: var(--medium-blue);
+}
+
+.faq-item-header i {
+  stroke-width: 1.5px;
+  stroke: var(--black);
+  font-size: 1.2rem;
+}
+
+.faq-item-content {
+  display: none;
+}
+
+.faq-item-content.show {
+  display: block;
+}
+
+.faq-item-content p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--black);
+  padding-top: 2.4rem;
+}
+
+/* =============================== RESPONSIVE =============================== */
 @media (max-width: 1000px) {
   /* =============================== HERO =============================== */
   .header-logo {
@@ -556,6 +686,17 @@ section {
   /* =============================== ABOUT =============================== */
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* =============================== REVIEWS =============================== */
+
+  .reviews-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .reviews-item {
+    flex-grow: 1;
   }
 }
 
@@ -625,6 +766,12 @@ section {
   .problem-item,
   .problem-box {
     flex-direction: column;
+  }
+
+  /* =============================== FAQ =============================== */
+
+  .faq-list {
+    grid-template-columns: 1fr;
   }
 }
 
