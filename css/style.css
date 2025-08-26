@@ -661,6 +661,127 @@ section {
   padding-top: 2.4rem;
 }
 
+/* =============================== FORM =============================== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-top: 1rem;
+  gap: 5rem;
+}
+
+.form-left {
+  padding-top: 4.8rem;
+}
+
+.form-left input {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 150%;
+  color: #999;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid #cdd1d4;
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+/* =============================== FOOTER =============================== */
+
+.footer {
+  padding: 4rem 0;
+  background-color: var(--dark-blue);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link-list {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.footer-link-list a {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fafafa;
+}
+
+.footer-socials {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-socials a {
+  width: 3.8rem;
+  height: 3.8rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.7rem 0 4.8rem;
+}
+
+.footer-middle-left h3 {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #fafafa;
+  margin-bottom: 2.1rem;
+}
+
+.footer-middle-left i {
+  color: var(--red);
+}
+
+.footer-middle-left h4 {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fafafa;
+}
+
+.footer-middle-right h3 {
+  font-family: var(--font-1);
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #fafafa;
+  margin-bottom: 0.4rem;
+}
+
+.footer hr {
+  margin-bottom: 3.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgba(245, 245, 245, 0.54);
+}
+
 /* =============================== RESPONSIVE =============================== */
 @media (max-width: 1000px) {
   /* =============================== HERO =============================== */
@@ -773,6 +894,17 @@ section {
   .faq-list {
     grid-template-columns: 1fr;
   }
+
+  /* =============================== FORM =============================== */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* =============================== FOOTER =============================== */
+  .footer-top {
+    gap: 2rem;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
@@ -793,5 +925,18 @@ section {
   /* =============================== ABOUT =============================== */
   .about-list {
     grid-template-columns: 1fr;
+  }
+
+  /* =============================== FOOTER =============================== */
+  .footer-link-list,
+  .footer-middle,
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-middle,
+  .footer-bottom {
+    gap: 2rem;
+    text-align: center;
   }
 }
